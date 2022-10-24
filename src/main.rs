@@ -228,7 +228,7 @@ fn main() {
     let stack: Vec<u64> = Vec::new();
     let mut program: Vec<(String, String, String)> = Vec::new();
 
-    program = parse("fib.rvm", program);
+    program = parse("program.rvm", program);
     println!("{:?}", program);
     execute(program, registers, stack, memory);
 }
