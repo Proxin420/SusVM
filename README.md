@@ -1,14 +1,8 @@
 
-# RVM
+# SusVM
 
 ## About
-RVM is a virtual machine written in rust with x86_64 like instructions
-
-
-## Goals
-
-- [x] Moving data
-- [x] Access to memory
+SusVM is a virtual machine written in rust with x86_64 like instructions
 
 
 ## Manual
