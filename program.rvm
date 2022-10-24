@@ -1,0 +1,21 @@
+
+push 1
+pop rcx
+
+push 1
+pop rsi
+
+add rsi rcx
+
+push 10
+pop rbx
+
+cmp rcx rbx
+
+js 1
+
+
+// Clean up registers
+push 0
+pop rbx
+
