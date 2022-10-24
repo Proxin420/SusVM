@@ -35,6 +35,46 @@ jb: Set the instruction pointer to the instruction specified if 2[Code for bigge
 2.4 Comparing registers
 cmp: compare the two registers specified and push the status code into the stack (SYNTAX): cmp reg reg<br>
 
+## Example
+Fibonacci number: <br>
+```
+// starting values
+push 0
+push 1
+
+// how to many times to loop
+push 11
+pop rax
+
+// loop counter
+push 0
+pop rcx
+
+// loop
+pop rdx
+pop rbx
+
+// copy rdx into rsi
+push rdx
+pop rsi
+
+add rbx rdx
+push rbx
+push rsi
+push rdx
+
+// add 1 to the loop counter
+push 1
+pop rsi
+add rsi rcx
+
+// compare counter to how many times to loop
+cmp rcx rax
+
+// jump if counter is smaller than how many times to loop
+js 5
+```
+
 
 ## Credits
 Cheat sheet for x86_64 asm:  https://cs.brown.edu/courses/cs033/docs/guides/x64_cheatsheet.pdf
